@@ -67,16 +67,18 @@ const Projects = () => {
           {/* Main Project Section */}
           <div
             ref={mainProjectRef}
-            className="bg-white rounded-lg shadow-lg overflow-hidden mb-12"
+            className="bg-white rounded-lg shadow-lg overflow-hidden mb-12 px-10 py-10 flex flex-col md:flex-row"
           >
-            <Image
-              src={activeProject.imageUrl}
-              alt={activeProject.title}
-              width={600} // Adjust width to match the container
-              height={400} // Adjust height for better appearance
-              className="object-cover w-full h-64" // Full width and specific height
-            />
-            <div className="p-6">
+            <div className="md:flex-1 p-4 md:p-0 rounded-md"> {/* Added padding here */}
+              <Image
+                src={activeProject.imageUrl}
+                alt={activeProject.title}
+                width={600} // Adjust width to match the container
+                height={400} // Adjust height for better appearance
+                className="object-cover rounded-md w-full h-64" // Active project image with rounded corners
+              />
+            </div>
+            <div className="md:flex-1 p-6 flex flex-col justify-center">
               <h3 className="text-3xl font-semibold mb-4">{activeProject.title}</h3>
               <p className="text-lg text-gray-600 mb-4">{activeProject.description}</p>
               {/* Dynamic Button Text to match the project title */}
@@ -94,14 +96,14 @@ const Projects = () => {
             {additionalProjects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105"
+                className="bg-white shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105"
               >
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
                   width={600} // Set a consistent width for thumbnail images
                   height={300} // Adjust height for consistency
-                  className="object-cover w-full h-48" // Maintain aspect ratio and cover
+                  className="object-cover w-full h-48" // Additional project images without rounded corners
                 />
                 <div className="p-6">
                   <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
