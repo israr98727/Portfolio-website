@@ -25,3 +25,26 @@ body {
     text-wrap: balance;
   }
 }
+/* Add this to your globals.css */
+
+.blend-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.blend-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Adjust the color as needed */
+  mix-blend-mode: multiply; /* Change to desired blend mode */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.blend-effect:hover::after {
+  opacity: 1; /* Show the blend effect on hover */
+}
