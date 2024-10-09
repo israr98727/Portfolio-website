@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export default function HomePage() {
   return (
     <main className="bg-gray-100 min-h-screen"> {/* Ensures full-screen height */}
@@ -25,12 +26,14 @@ export default function HomePage() {
             <p className="text-md md:text-2xl mb-8 mx-5">
               Hi, I’m Israr Ahmed, a passionate React Developer.
             </p>
-            <a
-              href="/projects"
-              className="bg-white text-purple-500 w-[60%] md:w-[20vw] py-4 md:py-[25px] text-center rounded-full font-semibold hover:bg-gray-200 transition duration-300"
-            >
-              View My Projects
-            </a>
+            <div className="flex justify-center w-full"> {/* Centering container */}
+              <a
+                href="/projects"
+                className="bg-white text-purple-500 w-[60%] md:w-[20vw] py-4 text-center rounded-full font-semibold hover:bg-gray-200 transition duration-300"
+              >
+                View My Projects
+              </a>
+            </div>
           </div>
         </div>
       </section>
