@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main className="bg-gray-100 min-h-screen"> {/* Ensures full-screen height */}
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white min-h-screen py-16 md:py-32 flex items-center"> {/* Full height for hero */}
+      <section className="bg-gradient-to-r from-blue-500 via-purple-500 to-purple-800 text-white min-h-screen py-16 md:py-32 flex items-center"> {/* Full height for hero */}
         <div className="container mx-auto text-center flex flex-col md:flex-row items-center md:items-start">
           
           {/* Profile Image */}

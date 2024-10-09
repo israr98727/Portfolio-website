@@ -60,7 +60,7 @@ const Projects = () => {
   return (
     <>
       <Navbar /> {/* Navbar component added */}
-      <main className="min-h-screen py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      <main className="min-h-screen py-20 bg-gradient-to-r from-blue-500 via-purple-500 to-purple-800">
         <div className="container mx-auto text-center px-4 md:px-0">
           <h2 className="text-4xl font-bold mb-10 text-white">My Projects</h2>
 
@@ -83,7 +83,7 @@ const Projects = () => {
               <p className="text-lg text-gray-600 mb-4">{activeProject.description}</p>
               {/* Dynamic Button Text to match the project title */}
               <Link href={activeProject.projectUrl} passHref>
-                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-md transition duration-300 hover:bg-gradient-to-l">
+                <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-md transition duration-300 hover:bg-gradient-to-l">
                   Visit {activeProject.title}
                 </button>
               </Link>
@@ -110,7 +110,7 @@ const Projects = () => {
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <button
                     onClick={() => handleProjectClick(project)} // Set active project on click
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-md transition duration-300 hover:bg-gradient-to-l"
+                    className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-md transition duration-300 hover:bg-gradient-to-l"
                   >
                     View Project
                   </button>
